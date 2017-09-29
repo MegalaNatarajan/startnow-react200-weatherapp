@@ -4,8 +4,9 @@
   "description": "Base application setup for creating a new react project.",
   "main": "server/index.js",
   "scripts": {
-    "build": "npm run less && webpack -w",
+    "build": "npm run less && webpack",
     "start": "node server/index.js",
+    "postinstall": "npm run build",
     "less": "lessc src/css/style.less dist/css/style.css",
     "lint": "eslint .",
     "test": "npm run build && mocha test/.setup.js test/*.spec.js"
